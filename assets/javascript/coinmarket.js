@@ -16,7 +16,7 @@ $(document).ready(function() {
             var results = JSON.stringify(response.data);
             console.log(results);
 
-            $("#testDiv01").append(response);
+            $("#testDiv01").text(results);
 
         });
 });
