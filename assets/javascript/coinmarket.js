@@ -13,10 +13,20 @@ $(document).ready(function() {
 
             console.log(response);
 
-            var results = JSON.stringify(response.data);
+            var results = response.data;
             console.log(results);
 
-            $("#testDiv01").text(results);
+            $("#testDiv01").append(results);
 
+            for (i = 0; i < results.length; i++) {
+
+                
+                var name = results[i].symbol;
+
+                var holder = $("<div>").text(name);
+
+                $("#testDiv01").append(holder);
+
+            }
         });
 });
