@@ -51,13 +51,15 @@ $(document).ready(function() {
             var symbol = results[i].symbol;
             var image = results[i].image;
             var currentPrice = results[i].current_price
+            var hourChange = results[i].price_change_percentage_24h
 
-            var holder = $("<div>").text(id + " " + symbol + " " + name + " " + currentPrice);
+            var holder = $("<div>").text(id + " " + symbol + " " + name + " " + currentPrice + " " + hourChange);
 
             var imgHolder = $("<img src=\"" + image + "\">");
 
             $("#testDiv01").append(imgHolder);
             $("#testDiv01").append(holder);
+            //$("#testDiv01").append("<br>");
         }
     });
 });
