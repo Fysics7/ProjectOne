@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fin Tech Trends</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Lobster+Two|Tangerine|Markazi+Text" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- materialize Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <!-- materialize Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+</head>
+
+<body>
+  <div class=ticker-box>
+      <marquee behavior="scroll" direction="right" 
+      onmouseover="this.stop();" 
+      onmouseout="this.start();">
+          ADA  BTC  DASH  EOS  ETH  LOGO  ITC  NEO  TRX  XMR  XRP
+  </marquee>
+  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2">
+        <a href="#" id="logo">
+            <img src="assets/images/logo.jpg" width="100" height="60"class="d-inline-block align-left"  alt=""></a>
+    </div>  
+      <div class="col-lg-10" id="title">
+      <h1>FinTech Trends</h1>      
+      </div>
+  </div>
+</div>
+
+
+<div class="container-fluid bg-3 text-center" id="main-contents">    
+  <div class="row">
+    <div class="col-lg-12 " id="crytoDiv">
+        <!--crypto images go here  -->
+    </div>
+  </div>
+  <div class="row ">
+      <div class="col-sm-4" id="dataDiv">Crypto data from the API goes here id="dataDiv"</div>
+      <!-- <div class="col-sm-1" ></div> -->
+      <div class="col-sm-4" id="firebaseDiv">firebase data goes here  id="firebaseDiv"</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8" id="articleDiv">News Articles go here...</div>
+  </div>
+</div>
+<footer>
+    <div class="container text-center">
+      <p>Copyright &copy; FTT 2018</p>
+    </div>
+</footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/tickerwork.js"></script>
+  <!-- <script type="text/javascript" src="assets/javascript/cryptobutton.js"></script> -->
+
+</body>
+</html>
+
