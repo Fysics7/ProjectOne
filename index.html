@@ -15,9 +15,19 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+  <script type="text/javascript" src="assets/javascript/cryptobutton.js"></script>
+  <script type="text/javascript" src="assets/javascript/tickerwork.js"></script>
+  <!-- <script type="text/javascript" src="assets/javascript/cryptobutton.js"></script> -->
 </head>
 
 <body>
+  <div class=ticker-box>
+      <marquee behavior="scroll" direction="right" 
+      onmouseover="this.stop();" 
+      onmouseout="this.start();">
+          ADA  BTC  DASH  EOS  ETH  LOGO  ITC  NEO  TRX  XMR  XRP
+  </marquee>
+  </div>
 <div class="container">
   <div class="row">
     <div class="col-lg-2">
@@ -51,8 +61,6 @@
       <p>Copyright &copy; FTT 2018</p>
     </div>
 </footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="assets/javascript/cryptobutton.js"></script>
 </body>
 </html>
 
