@@ -1,36 +1,6 @@
 $(document).ready(function() {
     
-    /*//CoinMarketCap Query URL
-    var queryURL = "https://api.coinmarketcap.com/v2/listings/";
-
-    //AJAX CoinMarketCap
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    })
-        .then(function(response) {
-
-            //console.log(response);
-
-            var results = response.data;
-            //console.log(results);
-
-            $("#testDiv01").append(results);
-
-            for (i = 0; i < results.length; i++) {
-
-                
-                var name = results[i].symbol;
-
-                var holder = $("<div>").text(name);
-
-                $("#testDiv01").append(holder);
-
-            }
-        });*/
-
-    
-    var queryURL = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc";
+    var queryURL = "https://api.coingecko.com/api/v3/coins?order=market_cap_   &per_page=5";
 
     $.ajax({
         url: queryURL,
@@ -49,9 +19,9 @@ $(document).ready(function() {
             var name = results[i].name;
             var id = results[i].id;
             var symbol = results[i].symbol;
-            var image = results[i].image;
-            var currentPrice = results[i].current_price
-            var hourChange = results[i].price_change_percentage_24h
+            var image = results[i].image.small;
+            var currentPrice = results[i].market_data.current_price.usd;
+            var hourChange = results[i].market_data.price_change_percentage_24h
 
             var holder = $("<div>").text(id + " " + symbol + " " + name + " " + currentPrice + " " + hourChange);
 
@@ -60,6 +30,35 @@ $(document).ready(function() {
             $("#testDiv01").append(imgHolder);
             $("#testDiv01").append(holder);
             //$("#testDiv01").append("<br>");
+
+            var a = $("<img>");
+    
+            a.addClass("crypto-btn");
+            a.addClass("img-rounded");
+            a.addClass("imagestyle");
+            a.attr("src", image);
+            a.attr("id", id);
+            $("#crytoDiv").append(a);
+             
         }
+    });
+
+    $(document).on("click", ".crypto-btn", function(event){
+        event.preventDefault();
+
+        console.log(this.id);
+        var queryURL = "https://api.coingecko.com/api/v3/coins/" + this.id;
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        })
+        .then(function(response) {
+            console.log(response);
+            var results = response;
+
+            $("#dataDiv").html("");
+            $("#dataDiv").append(JSON.stringify(results));
+        }); 
     });
 });

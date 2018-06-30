@@ -21,11 +21,9 @@ function renderButtons() {
 renderButtons();
 
 //Click listener to capture number of clicks for each crypto
-$(".crypto-btn").on("click", function(event){
+/*$(".crypto-btn").on("click", function(event){
     event.preventDefault();
     var count = 0;
 
     
-})
-
-   
+})*/
