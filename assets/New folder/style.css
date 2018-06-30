@@ -1,0 +1,10 @@
+.carousel-item {
+    width: 800px;
+    height: 400px;
+}
+
+.articles {
+    border: solid;
+    border-width: 3px;
+    margin-top: 500px;
+}

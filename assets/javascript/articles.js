@@ -4,50 +4,36 @@ var url = 'https://newsapi.org/v2/top-headlines?' +
 
 $.ajax({
   url: url,
-  method: 'GET',
+  method: 'GET'
 }).then(function(response) {
    console.log(response);
 
   for (var i = 0; i < response.articles.length; i++) {
 
-    article = response.articles[i].url;
-    title = response.articles[i].title;
-    articleImage = response.articles[i].urlToImage;
+    var article = response.articles[i].url;
+    var title = response.articles[i].title;
+    var articleDiv = $("<div>");
+    var articleImage = $("<img>");
+
+    articleDiv.addClass("carousel-item")
+    articleImage.addClass("image-carousel")
+    articleImage.attr("src", response.articles[i].urlToImage);
+
+    articleDiv.append(articleImage);
+    $(".carousel-inner").append(articleDiv);
 
     console.log(article);
     console.log(title);
     console.log(articleImage);
 
-    $("#image-carousel").attr("src", articleImage);
-    $("#image-carousel").append(articleImage);
-
-    // topArticles.attr("href", article);
-  //   topArticles.addClass("articleclass");
-  //   topArticles.attr("data-title", title);
-  //   topArticles.attr("src", articleImage);
-
-  //   topArticles.append(article);
-  //   topArticles.append(articleImage)
-
-  //   articleDiv.append(topArticles);
-  //   $("#article-area").append(articleDiv);
+    // $(".image-carousel").attr("src", articleImage);
+    // $(".carousel-item").append(articleImage);
   }
+  $('.carousel').show();
   
 }).fail(function(err) {
   throw err;
 });
-
-
-// topArticles.attr("href", article);
-  //   topArticles.addClass("articleclass");
-  //   topArticles.attr("data-title", title);
-  //   topArticles.attr("src", articleImage);
-
-  //   topArticles.append(article);
-  //   topArticles.append(articleImage)
-
-  //   articleDiv.append(topArticles);
-  //   $("#article-area").append(articleDiv);
   
 
 
