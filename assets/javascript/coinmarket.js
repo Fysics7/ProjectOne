@@ -1,6 +1,6 @@
 $(document).ready(function() {
     
-    var queryURL = "https://api.coingecko.com/api/v3/coins?order=market_cap_   &per_page=5";
+    var queryURL = "https://api.coingecko.com/api/v3/coins?order=market_cap_&per_page=5";
 
     $.ajax({
         url: queryURL,
@@ -12,9 +12,9 @@ $(document).ready(function() {
 
         var results = response;
 
-        $("#testDiv01").append(results);
+        // $("#testDiv01").append(results);
 
-        for (i = 0; i < results.length; i++) {
+        for(i = 0; i < results.length; i++) {
 
             var name = results[i].name;
             var id = results[i].id;
