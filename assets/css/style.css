@@ -22,7 +22,7 @@
     margin-top: 500px;
 }
 
-body{
+ body {
     /* background-color: #f0f3f5; */
       /* background: url(../images/coinBackground2.jpg) ;
         /* Full height */
@@ -50,10 +50,10 @@ body{
         font-weight: bolder;
         /* font-style: italic; */
       }
-      #title{  
+      #title {  
        
       }
-      .container-fluid{
+      .container-fluid {
         /* background: whitesmoke; */
     }
       #main-contents{
