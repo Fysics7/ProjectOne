@@ -1,3 +1,16 @@
+#ticketnote {
+   
+  font-size: 12px; 
+  font-family: 'Share Tech Mono', monospace;
+}
+#updatePrices {
+
+  font-size: 20px;
+  font-family: 'Share Tech Mono', monospace;
+  color: yellow;
+  background-color: black;
+}
+
 .carousel-item {
     width: 800px;
     height: 400px;
