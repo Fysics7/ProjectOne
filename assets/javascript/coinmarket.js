@@ -12,8 +12,6 @@ $(document).ready(function() {
 
         var results = response;
 
-        // $("#testDiv01").append(results);
-
         for(i = 0; i < results.length; i++) {
 
             var name = results[i].name;
