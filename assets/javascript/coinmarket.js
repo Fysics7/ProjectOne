@@ -9,6 +9,7 @@ $(document).ready(function() {
     .then(function(response) {
 
         console.log(response);
+        
 
         var results = response;
 
@@ -71,6 +72,7 @@ $(document).ready(function() {
             var image = results.image.small;
             var currentPrice = Math.round(results.market_data.current_price.usd);
             var hourChange = Math.round(results.market_data.price_change_percentage_24h);
+            var description = results.description.en;
 
             var idDiv = $("<div>").text("ID: " + idG);
             var symbolDiv = $("<div>").text("Ticker: " + symbol.toUpperCase());
@@ -78,6 +80,7 @@ $(document).ready(function() {
             var currentPriceDiv = $("<div>").text("Current Price: $" + currentPrice + "USD");
             var hourChangeDiv = $("<div>").text("Change 24H: " + hourChange + "%");
             var imgDiv = $("<img>").attr("src", image);
+            var descDiv = $("<div>").text(description);
             
             $("#dataDiv").html("");
             $("#dataDiv").append(imgDiv);
@@ -86,6 +89,7 @@ $(document).ready(function() {
             $("#dataDiv").append(nameDiv);
             $("#dataDiv").append(currentPriceDiv);
             $("#dataDiv").append(hourChangeDiv);
+            $("#dataDiv").append(descDiv);
         }); 
     });
 });
