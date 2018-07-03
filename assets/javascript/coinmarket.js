@@ -1,13 +1,13 @@
 $(document).ready(function() {
     
-    var queryURL = "https://api.coingecko.com/api/v3/coins?order=market_cap_&per_page=5";
+    var queryURL = "https://api.coingecko.com/api/v3/coins?order=market_cap_&per_page=20";
 
     $.ajax({
         url: queryURL,
         method: "GET"
     })
     .then(function(response) {
-
+        
         console.log(response);
         
 
