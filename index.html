@@ -62,7 +62,25 @@
     <div class="row ">
       <div class="col-sm-4" id="dataDiv">Crypto data from the API goes here id="dataDiv"</div>
       <!-- <div class="col-sm-1" ></div> -->
-      <div class="col-sm-4" id="firebaseDiv">firebase data goes here id="firebaseDiv"</div>
+      <div class="col-sm-4" id="firebaseDiv">firebase data goes here id="firebaseDiv"
+          <div id="quizBtn">
+              <p id="p1">Would you like to take a crypto Quiz?</p>
+              <button id="yes">&emsp;YES&emsp;</button>&emsp;&emsp;<button id="no">&emsp;NO&emsp;</button>   
+          </div>
+          <!-- Quiz page -->
+          <div id="currentQuiz"></div>
+          <div class="quiz"></div>
+          <div class="answerList"></div>
+          <!-- Answer Page -->
+          <div id="message"></div>
+          <div id="correctedAnswer"></div>
+          <!-- result page -->
+          <div id="resultMessage"></div>
+          <div id="correctAnswers"></div>
+          <div id="incorrectAnswers"></div>
+          <div id="startOverBtn"></div>
+          <div id="participantNum"></div>
+      </div>
     </div>
     <div class="row">
       <div class="col-sm-8" id="articleDiv">News Articles go here...</div>
@@ -76,7 +94,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="assets/javascript/FinalTicker.js"></script>
-  <script type="text/javascript" src="assets/javascript/cryptobutton.js"></script>
+  <!-- <script type="text/javascript" src="assets/javascript/cryptobutton.js"></script> -->
+  <script type="text/javascript" src="assets/javascript/quiz.js"></script>
   <script src="assets/javascript/coinmarket.js"></script>
 
 </body>
