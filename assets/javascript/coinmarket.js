@@ -15,27 +15,36 @@ $(document).ready(function() {
         for(i = 0; i < results.length; i++) {
 
             var name = results[i].name;
-            var id = results[i].id;
+            var idG = results[i].id;
             var symbol = results[i].symbol;
             var image = results[i].image.small;
             var currentPrice = results[i].market_data.current_price.usd;
-            var hourChange = results[i].market_data.price_change_percentage_24h
+            var hourChange = results[i].market_data.price_change_percentage_24h;
 
-            var holder = $("<div>").text(id + " " + symbol + " " + name + " " + currentPrice + " " + hourChange);
+            var idDiv = $("<div>").text("ID: " + idG);
+            var symbolDiv = $("<div>").text("Ticker: " + symbol.toUpperCase());
+            var nameDiv = $("<div>").text("Name: " + name);
+            var currentPriceDiv = $("<div>").text("Current Price: " + currentPrice + "USD");
+            var hourChangeDiv = $("<div>").text("Change 24H: " + hourChange + "%");
+            var imgDiv = $("<img>").attr("src", image);
+            
 
-            var imgHolder = $("<img src=\"" + image + "\">");
-
-            $("#testDiv01").append(imgHolder);
-            $("#testDiv01").append(holder);
-            //$("#testDiv01").append("<br>");
-
+            $("#testDiv01").append(imgDiv);
+            $("#testDiv01").append(idDiv);
+            $("#testDiv01").append(symbolDiv);
+            $("#testDiv01").append(nameDiv);
+            $("#testDiv01").append(currentPriceDiv);
+            $("#testDiv01").append(hourChangeDiv);
+            
             var a = $("<img>");
     
             a.addClass("crypto-btn");
             a.addClass("img-rounded");
             a.addClass("imagestyle");
             a.attr("src", image);
-            a.attr("id", id);
+            a.attr("id", idG);
+            
+            
             $("#crytoDiv").append(a);
              
         }
@@ -46,6 +55,7 @@ $(document).ready(function() {
 
         console.log(this.id);
         var queryURL = "https://api.coingecko.com/api/v3/coins/" + this.id;
+        console.log(queryURL);
 
         $.ajax({
             url: queryURL,
@@ -55,8 +65,27 @@ $(document).ready(function() {
             console.log(response);
             var results = response;
 
+            var name = results.name;
+            var idG = results.id;
+            var symbol = results.symbol;
+            var image = results.image.small;
+            var currentPrice = Math.round(results.market_data.current_price.usd);
+            var hourChange = Math.round(results.market_data.price_change_percentage_24h);
+
+            var idDiv = $("<div>").text("ID: " + idG);
+            var symbolDiv = $("<div>").text("Ticker: " + symbol.toUpperCase());
+            var nameDiv = $("<div>").text("Name: " + name);
+            var currentPriceDiv = $("<div>").text("Current Price: $" + currentPrice + "USD");
+            var hourChangeDiv = $("<div>").text("Change 24H: " + hourChange + "%");
+            var imgDiv = $("<img>").attr("src", image);
+            
             $("#dataDiv").html("");
-            $("#dataDiv").append(JSON.stringify(results));
+            $("#dataDiv").append(imgDiv);
+            $("#dataDiv").append(idDiv);
+            $("#dataDiv").append(symbolDiv);
+            $("#dataDiv").append(nameDiv);
+            $("#dataDiv").append(currentPriceDiv);
+            $("#dataDiv").append(hourChangeDiv);
         }); 
     });
 });
