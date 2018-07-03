@@ -1,6 +1,6 @@
 $(document).ready(function() {
     
-    var queryURL = "https://api.coingecko.com/api/v3/coins?order=market_cap_&per_page=20";
+    var queryURL = "https://api.coingecko.com/api/v3/coins?order=market_cap_&per_page=15";
 
     $.ajax({
         url: queryURL,
@@ -90,6 +90,25 @@ $(document).ready(function() {
             $("#dataDiv").append(currentPriceDiv);
             $("#dataDiv").append(hourChangeDiv);
             $("#dataDiv").append(descDiv);
+
+            
+            var url = 'https://newsapi.org/v2/everything?' +
+                    'q=' + idG + '&' +
+                    'sortBy=popularity&' +
+                    'apiKey=92a33ab165d642e59afe9cdf667782a2';
+              
+            var req = new Request(url);
+              
+            fetch(req)
+                .then(function(response) {
+                    console.log(response.json());
+
+                    var results = response;
+                    var news = Promise.resolve(results);
+                    console.log(news);
+                    var news2 = Promise.resolve(news);
+                    console.log(news2.);
+                })
         }); 
     });
 });
