@@ -79,6 +79,21 @@ body{
         margin-left: 50px;
         margin-top: 40px;
       }
+      .thisChoice:hover{
+        cursor: pointer;
+        background: #c0c0c0;
+      }
+      #quizBtn{
+        margin-top: 30px;
+      }
+      #yes,#no{
+        cursor: pointer;  
+      }
+      .reset{
+        background: #c0c0c0;;
+        cursor: pointer; 
+        margin-bottom: 30px;
+      }
       #articleDiv{
         height: 250px;
         width: 100%;
