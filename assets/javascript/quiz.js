@@ -41,25 +41,27 @@ finished: "Thank you for your participation."
 //function to hide yes/no/ buttons and the initial paragragh buttons
 // increment yesCount when yes button is clicked and push it to firebase
 $("#yes").on("click", function(){
-//do not use $("#quizBtn").empty() here
-$(this).hide();
-$("#no").hide();
-$("#p1").hide();
-yesCount++
-//console.log(yesCount);
-database.ref().push({
-    count: yesCount
-  });
-newGame();
- });
-
- function participant(){
-    database.ref().on("child_added", function(snapshot) {
-    var sv = snapshot.val();
-    console.log(sv.count);
-    $("#participantNum").text("Total number of participants: "+sv.count);
+    //do not use $("#quizBtn").empty() here
+    $(this).hide();
+    $("#no").hide();
+    $("#p1").hide();
+    yesCount++
+    //console.log(yesCount);
+    database.ref().set({
+        count: yesCount
     });
- }
+    newGame();
+ });
+//this code needs to be global should not put in a function. 
+//firebase data needs to be retrived first when the page is refreshed.
+database.ref().on("value", function(snapshot) {
+    var sv = snapshot.val();
+    yesCount = sv.count;
+});
+
+function participant(){
+    $("#participantNum").text("Total number of participants: "+ yesCount);
+}
 
 $("#no").on("click", function(){
     $("#yes").hide();
