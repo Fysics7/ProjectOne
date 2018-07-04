@@ -22,39 +22,35 @@
     margin-top: 500px;
 }
 
- body {
-    /* background-color: #f0f3f5; */
-      /* background: url(../images/coinBackground2.jpg) ;
-        /* Full height */
-        /* height: 100%; 
-        /* Center and scale the image nicely */
-        /* background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover; */ 
+body{
+  background-color: #f0f3f5;
+      background: url(../images/bitcoin1.jpeg) ;
+      /* Full height */
+      height: 100%; 
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; 
+  }
+  .container{
+      margin-top: 20px;
+      margin-bottom: 10px;
+   
     }
-    .container{
-        margin-top: 20px;
-        margin-bottom: 30px;
-        /* background: whitesmoke; */
-      }
       #logo{
         float: left;
         margin-right: 20px;   
         padding-top: 20px; 
       }
       h1{
-        /* font-family: 'Tangerine', cursive;
-        font-family: 'Great Vibes', cursive; */
         font-family: 'Markazi Text', serif;
         font-size: 45px;
         font-weight: bolder;
-        /* font-style: italic; */
       }
       #title {  
        
       }
-      .container-fluid {
-        /* background: whitesmoke; */
+      .container-fluid{
     }
       #main-contents{
         margin-top: 20px;
@@ -69,24 +65,46 @@
       #dataDiv{
         float: left;
         width:50%;
-        height: 200px;
-        border: solid 1px grey;
+        height: 250px;
         margin-left: 120px;
         margin-top: 40px;
-      }
+        background: whitesmoke;
+        overflow: scroll;
+        }
     
       #firebaseDiv{
         width: 50%;
-        height: 200px;
-        border: solid 1px grey;
+        height: 250px;
+        background: whitesmoke;
         margin-left: 50px;
         margin-top: 40px;
-    
+      }
+      .thisChoice:hover{
+        cursor: pointer;
+        background: #c0c0c0;
+      }
+      #quizBtn{
+        margin-top: 30px;
+      }
+      #yes,#no{
+        cursor: pointer;  
+      }
+      .reset{
+        background: #c0c0c0;;
+        cursor: pointer; 
+        margin-bottom: 30px;
       }
       #articleDiv{
-        height: 300px;
-        width: 800px;
-        border: solid 1px grey;
+        height: 250px;
+        width: 100%;
+        background: whitesmoke;
         margin-left: 120px;
         margin-top: 40px;
+        overflow: scroll;
+      }
+      footer{
+        width: 100%;
+        padding: 8px;
+        background: #36383b;
+        color: white;
       }
