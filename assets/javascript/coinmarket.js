@@ -13,7 +13,7 @@ $(document).ready(function() {
 
         var results = response;
 
-        for(i = 0; i < results.length; i++) {
+        for (i = 0; i < results.length; i++) {
 
             var name = results[i].name;
             var idG = results[i].id;
@@ -102,26 +102,44 @@ $(document).ready(function() {
                 method: "GET"
             })
             .then(function(response) {
-                var results = response;
+                var results = response.articles;
+                console.log(results);
 
-                for (i = 0; results.length; i++) {
+                for (i = 0; i < results.length; i++) {
+                    console.log("---------");
+                    var auth = results[i].author;
 
-                    var author = results[i].author;
                     var desc = results[i].description;
-                    var source = results[i].source.name;
+                    var src = results[i].source.name;
                     var title = results[i].title;
-                    var url = results[i].url;
+                    var articleURL = results[i].url;
                     var imgURL = results[i].urlToImage;
 
-                    var authDiv = $("<div>").text("Author: " + author);
+                    console.log("test" + auth);
+                    var titleDiv = $("<div>").text("Title: " + title);
+                    var authDiv = $("<div>").text("Author: " + auth);
                     var descDiv = $("<div>").text(desc);
-                    var sourceDiv = $("<div>").text(source);
-                    var titleDiv = $("<a>").attr("href", url);
-                    titleDiv.text(title);
-                    var imgDiv = $("<img>").attr("src", imgURL);
 
-                    $("#articleDiv").html("");
-                    $("#articleDiv").append();
+                    var sourceDiv = $("<div>").text(src);
+                    
+                    var linkDiv = $("<a>").attr("href", articleURL);
+
+                    var imgDiv = $("<img>").attr({
+                        src: imgURL,
+                        alt: title,
+                        width: "45%",
+                    });
+
+                    var comboDiv = linkDiv + imgDiv;
+
+                    //$("#articleDiv").html("");
+                    $("#articleDiv").append(titleDiv);
+                    $("#articleDiv").append(authDiv);
+                    $("#articleDiv").append(descDiv);
+                    $("#articleDiv").append(sourceDiv);
+                    $("#articleDiv").append(imgDiv);
+                
+                    
                 }
 
             });
