@@ -92,23 +92,41 @@ $(document).ready(function() {
             $("#dataDiv").append(descDiv);
 
             
-            var url = 'https://newsapi.org/v2/everything?' +
+            var QueryURL = 'https://newsapi.org/v2/everything?' +
                     'q=' + idG + '&' +
                     'sortBy=popularity&' +
                     'apiKey=92a33ab165d642e59afe9cdf667782a2';
               
-            var req = new Request(url);
-              
-            fetch(req)
-                .then(function(response) {
-                    console.log(response.json());
+            $.ajax({
+                url: QueryURL,
+                method: "GET"
+            })
+            .then(function(response) {
+                var results = response;
 
-                    var results = response;
-                    var news = Promise.resolve(results);
-                    console.log(news);
-                    var news2 = Promise.resolve(news);
-                    console.log(news2.);
-                })
+                for (i = 0; results.length; i++) {
+
+                    var author = results[i].author;
+                    var desc = results[i].description;
+                    var source = results[i].source.name;
+                    var title = results[i].title;
+                    var url = results[i].url;
+                    var imgURL = results[i].urlToImage;
+
+                    var authDiv = $("<div>").text("Author: " + author);
+                    var descDiv = $("<div>").text(desc);
+                    var sourceDiv = $("<div>").text(source);
+                    var titleDiv = $("<a>").attr("href", url);
+                    titleDiv.text(title);
+                    var imgDiv = $("<img>").attr("src", imgURL);
+
+                    $("#articleDiv").html("");
+                    $("#articleDiv").append();
+                }
+
+            });
+
+            
         }); 
     });
 });
