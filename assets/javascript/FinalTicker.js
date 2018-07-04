@@ -2,7 +2,7 @@
 $(document).ready(function () {
 
     // API URL - I have put the number of results, but we can increase this value or decrease this value, via 'page=""'
-    var queryURL = "https://api.coingecko.com/api/v3/coins?order=market_cap_&per_page=70";
+    var queryURL = "https://api.coingecko.com/api/v3/coins?order=market_cap_&per_page=85";
     
     // Requesting data from Coingecko API
     $.ajax({
