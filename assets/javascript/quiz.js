@@ -144,10 +144,10 @@ function answerPage(){
 	}
 	
 	if(currentQuiz == (quiz.length-1)){
-		setTimeout(resultPage, 2000)
+		setTimeout(resultPage, 1500)
 	} else{
 		currentQuiz++;
-		setTimeout(newQuiz, 2000);
+		setTimeout(newQuiz, 1000);
 	}	
 }
 function resultPage(){

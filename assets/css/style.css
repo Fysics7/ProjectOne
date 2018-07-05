@@ -33,78 +33,115 @@ body{
       background-size: cover; 
   }
   .container{
-      margin-top: 20px;
+      margin-top: 10px;
       margin-bottom: 10px;
    
     }
-      #logo{
-        float: left;
-        margin-right: 20px;   
-        padding-top: 20px; 
-      }
-      h1{
-        font-family: 'Markazi Text', serif;
-        font-size: 45px;
-        font-weight: bolder;
-      }
-      #title{  
-       
-      }
+    #logo{
+      float: left;
+      margin-right: 20px;   
+      padding-top: 20px; 
+    }
+    h1{
+      font-family: 'Markazi Text', serif;
+      font-size: 45px;
+      font-weight: bolder;
+    }
+    #signupBtn{
+      color: aliceblue;
+     
+    }
+     
+    #signUp{
+      position: absolute;
+      right: 20px;
+      z-index: 1;
+      border: solid 1px whitesmoke;
+      border-radius: 10px;
+      background: whitesmoke;
+    }
+    h3{
+      text-align: center;
+      font-size: 40px;
+      color: rgb(68, 151, 172);
+      font-weight: 600;
+      font-family: 'Markazi Text', serif;
+    }
+    .input-field label {
+      color: #36383b;
+    }
       .container-fluid{
+    }
+    #crytoDiv{
+      text-align: left;
     }
       #main-contents{
         margin-top: 20px;
+        background: #f0f3f5;
       }
-      .imagestyle{
-        border-radius:10px;
-        border: solid 1.5px #12254e;
-        margin-right: 5px;
-        margin-bottom: 10px;
-        cursor: pointer;
+    .imagestyle{
+      border-radius:10px;
+      border: solid 1.5px #12254e;
+      margin-right: 5px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    #dataDiv{
+      float: left;
+      width:70%;
+      height: 250px;
+      margin-left: 10px;
+      margin-top: 10px;
+      background: #c0c0c0;  
+      overflow: scroll;
+      z-index: 5;
+      color: rgb(29, 31, 31);
+      border-radius: 10px;
       }
-      #dataDiv{
-        float: left;
-        width:50%;
-        height: 250px;
-        margin-left: 120px;
-        margin-top: 40px;
-        background: whitesmoke;
-        overflow: scroll;
-        }
-    
-      #firebaseDiv{
-        width: 50%;
-        height: 250px;
-        background: whitesmoke;
-        margin-left: 50px;
-        margin-top: 40px;
-      }
-      .thisChoice:hover{
-        cursor: pointer;
-        background: #c0c0c0;
-      }
-      #quizBtn{
-        margin-top: 30px;
-      }
-      #yes,#no{
-        cursor: pointer;  
-      }
-      .reset{
-        background: #c0c0c0;;
-        cursor: pointer; 
-        margin-bottom: 30px;
-      }
-      #articleDiv{
-        height: 250px;
-        width: 100%;
-        background: whitesmoke;
-        margin-left: 120px;
-        margin-top: 40px;
-        overflow: scroll;
-      }
-      footer{
-        width: 100%;
-        padding: 8px;
-        background: #36383b;
-        color: white;
-      }
+  
+    #firebaseDiv{
+      float: left;
+      width: 30%;
+      height: 250px;
+      background: #c0c0c0;  
+      margin-left: 30px;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+    .thisChoice:hover{
+      cursor: pointer;
+      background: #2b4b44;
+      font-weight: 400;
+      color: #c0c0c0;
+    }
+    #quizBtn{
+      margin-top: 30px;
+    }
+    #yes,#no{
+      cursor: pointer;  
+    }
+    .reset:hover{
+      background: #2b4b44;
+      cursor: pointer; 
+      color: #c0c0c0;
+    }
+    .reset{
+      margin-bottom: 30px;
+    }
+    #articleDiv{
+      height: 250px;
+      width: 100%;
+      background: #c0c0c0;  
+      margin-left: 0px;
+      margin-top: 10px;
+      overflow: scroll;
+      border-radius: 10px;
+    }
+    footer{
+      
+      padding: 8px;
+      background: #36383b;
+      color: white;
+      text-align: center;
+    }
