@@ -45,6 +45,7 @@ $("#yes").on("click", function(){
     $(this).hide();
     $("#no").hide();
     $("#p1").hide();
+    $("#quizInitial-image").hide();
     yesCount++
     //console.log(yesCount);
     database.ref().set({
@@ -66,10 +67,12 @@ function participant(){
 $("#no").on("click", function(){
     $("#yes").hide();
     $("#p1").hide();
+    $("#quizInitial-image").hide();
     $(this).hide();
     var p2=$("<p class=p2>")
     p2.text("Good Bye!");
     $("#quizBtn").append(p2);
+    $("#gif").html("<img src = 'assets/images/bye.gif' width = '150px'>")
     $("#startOverBtn").show();
     $("#startOverBtn").html("Reset");   
  });
@@ -82,6 +85,8 @@ $("#startOverBtn").on("click", function(){
     $("#correctAnswers").empty();
     $("#incorrectAnswers").empty();   
     $("#participantNum").empty();
+    $("#gif").empty();
+    $("#quizInitial-image").show();
     $("#yes").show();
     $("p").show();
     $("#no").show();
@@ -89,7 +94,7 @@ $("#startOverBtn").on("click", function(){
 function newGame(){
 	$("#resultMessage").empty();
 	$("#correctAnswers").empty();
-	$("#incorrectAnswers").empty();
+    $("#incorrectAnswers").empty();
 	currentQuiz = 0;
 	correctAnswer = 0;
 	incorrectAnswer = 0;
@@ -100,6 +105,7 @@ function newQuiz(){
     $("#message").empty();
     $("#correctedAnswer").empty();
     $("#participantNum").empty();
+    $("#gif").empty();
     answered = true;
     
     //sets up new questions & answerList
@@ -130,11 +136,13 @@ function answerPage(){
 	//checks to see correct, incorrect, or unanswered
 	if((userSelect == rightAnswerIndex) && (answered == true)){
 		correctAnswer++;
-		$("#message").html(messages.correct);
+        $("#message").html(messages.correct);
+        $("#gif").html("<img src = 'assets/images/correct.gif' width = '150px'>")
 	} else if((userSelect != rightAnswerIndex) && (answered == true)){
 		incorrectAnswer++;
 		$("#message").html(messages.incorrect);
-		$("#correctedAnswer").html("The correct answer was: " + rightAnswerText);
+        $("#correctedAnswer").html("The correct answer was: " + rightAnswerText);
+        $("#gif").html("<img src = 'assets/images/wrong.gif' width = '150px'>")
     } 
     else{
 		unanswered++;
@@ -144,15 +152,16 @@ function answerPage(){
 	}
 	
 	if(currentQuiz == (quiz.length-1)){
-		setTimeout(resultPage, 2000)
+		setTimeout(resultPage, 1500)
 	} else{
 		currentQuiz++;
-		setTimeout(newQuiz, 2000);
+		setTimeout(newQuiz, 1000);
 	}	
 }
 function resultPage(){
 	$("#message").empty();
-	$("#correctedAnswer").empty();
+    $("#correctedAnswer").empty();
+    $("#gif").empty();
 	$("#resultMessage").html(messages.finished);
 	$("#correctAnswers").html("Correct Answers: " + correctAnswer);
 	$("#incorrectAnswers").html("Incorrect Answers: " + incorrectAnswer);
@@ -164,3 +173,9 @@ function resultPage(){
 } 
 
 
+//dataDiv initial image
+$("#dataDiv-image").html("<img src = 'assets/images/stockAnimation.gif' height= '175px'width = '258'>");
+//articleDiv initial image
+//$("#articleDiv").html("<img src = 'assets/images/finance.gif' height= '230px'width = '680'>");
+//quizBtn initial image
+$("#quizInitial-image").html("<img src = 'assets/images/quiz.gif' height= '120px'width = '180'>");
