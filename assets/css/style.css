@@ -31,6 +31,8 @@ body{
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover; 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
   }
   .container{
       margin-top: 10px;
@@ -88,26 +90,40 @@ body{
       cursor: pointer;
     }
     #dataDiv{
+      clear: both;
       float: left;
       width:70%;
       height: 250px;
-      margin-left: 10px;
       margin-top: 10px;
-      background: #c0c0c0;  
+      margin-left: 10px;
+      /* background: #c0c0c0;   */
       overflow: scroll;
-      z-index: 5;
-      color: rgb(29, 31, 31);
+      font-weight: 300;
       border-radius: 10px;
       }
   
     #firebaseDiv{
+      clear: both;
       float: left;
       width: 30%;
       height: 250px;
-      background: #c0c0c0;  
-      margin-left: 30px;
+      /* background: #c0c0c0;   */
+      background: aliceblue;
       margin-top: 10px;
+      margin-left: 30px;
+      margin-right: 0px;
+      z-index: l;
       border-radius: 10px;
+    }
+    #quizInitial-image{
+      background: aliceblue;
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+    h6{
+      color: black;
+      font-weight: 300;
+      z-index: 1;
     }
     .thisChoice:hover{
       cursor: pointer;
@@ -130,9 +146,11 @@ body{
       margin-bottom: 30px;
     }
     #articleDiv{
+      clear: both;
       height: 250px;
       width: 100%;
-      background: #c0c0c0;  
+      /* background: #c0c0c0;   */
+      background: aliceblue;
       margin-left: 0px;
       margin-top: 10px;
       overflow: scroll;

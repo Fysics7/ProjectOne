@@ -96,13 +96,19 @@
       </div>
     </div>
     <div class="row ">
-      <div class="col-sm-5 z-depth-5" id="dataDiv">Crypto data from the API goes here id="dataDiv"</div>
+      <div class="col-sm-5 z-depth-5" id="dataDiv" style="font-weight: 450;">
+        <p>Click a button above to get the data for the crypto</p>
+          <div class="col-sm-12 z-depth-8" id="dataDiv-image">
+          </div>
+      </div>
       <!-- <div class="col-sm-1" ></div> -->
       <div class="col-sm-5 z-depth-5" id="firebaseDiv">
           <div id="quizBtn">
               <p id="p1">Would you like to take a crypto Quiz?</p>
               <button id="yes">&emsp;YES&emsp;</button>&emsp;&emsp;<button id="no">&emsp;NO&emsp;</button>   
-          </div>
+                <div class="col-sm-12 z-depth-8" id="quizInitial-image">
+                </div>
+            </div>
           <!-- Quiz page -->
           <div id="currentQuiz"></div>
           <div class="quiz"></div>
@@ -110,6 +116,7 @@
           <!-- Answer Page -->
           <div id="message"></div>
           <div id="correctedAnswer"></div>
+          <div id="gif"></div>
           <!-- result page -->
           <div id="resultMessage"></div>
           <div id="correctAnswers"></div>
