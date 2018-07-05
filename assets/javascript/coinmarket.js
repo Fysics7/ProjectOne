@@ -123,21 +123,27 @@ $(document).ready(function() {
                     var sourceDiv = $("<div>").text(src);
                     
                     var linkDiv = $("<a>").attr("href", articleURL);
+                    
 
                     var imgDiv = $("<img>").attr({
                         src: imgURL,
                         alt: title,
-                        width: "45%",
+                        width: "75%",
                     });
 
-                    var comboDiv = linkDiv + imgDiv;
+                
 
-                    //$("#articleDiv").html("");
+                    //$(linkDiv).text(title);
+                    var monkDiv = linkDiv.append(imgDiv);
+
+
                     $("#articleDiv").append(titleDiv);
+                    $("#articleDiv").append(monkDiv);
+                    $("#articleDiv").append("<br>");
+                    /*$("#articleDiv").append(titleDiv);
                     $("#articleDiv").append(authDiv);
                     $("#articleDiv").append(descDiv);
-                    $("#articleDiv").append(sourceDiv);
-                    $("#articleDiv").append(imgDiv);
+                    $("#articleDiv").append(sourceDiv);*/
                 
                     
                 }
