@@ -41,18 +41,20 @@ body{
     }
 
     #logo{
-      float: left;
-      margin-right: 20px;   
-      padding-top: 20px; 
+      
     }
+
     h1{
+      position: relative;
       font-family: 'Markazi Text', serif;
       font-size: 45px;
       font-weight: bolder;
+    
     }
     #signupBtn{
       color: aliceblue;
-     
+      position: relative;
+      margin-right: 10px;
     }
      
     #signUp{
@@ -66,7 +68,7 @@ body{
     h3{
       text-align: center;
       font-size: 40px;
-      color: rgb(68, 151, 172);
+      color: rgb(102, 96, 96);
       font-weight: 600;
       font-family: 'Markazi Text', serif;
     }
@@ -82,7 +84,7 @@ body{
     }
       #main-contents{
         margin-top: 20px;
-        background: #f0f3f5;
+        background: rgb(245, 242, 242);
       }
     .imagestyle{
       border-radius:10px;
@@ -121,7 +123,12 @@ body{
     #quizInitial-image{
       background: aliceblue;
       margin-top: 30px;
-      margin-left: 30px;
+      
+    }
+    @media only screen and (max-width: 600px){
+      #quizInitial-image{
+        display:none;
+      }
     }
     h6{
       color: black;
@@ -150,7 +157,7 @@ body{
     }
     #articleDiv{
       clear: both;
-      height: 250px;
+      height: 450px;
       width: 100%;
       /* background: #c0c0c0;   */
       background: aliceblue;

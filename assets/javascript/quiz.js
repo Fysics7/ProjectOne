@@ -174,8 +174,8 @@ function resultPage(){
 
 
 //dataDiv initial image
-$("#dataDiv-image").html("<img src = 'assets/images/stockAnimation.gif' height= '175px'width = '258'>");
+$("#dataDiv-image").html("<img src = 'assets/images/stockAnimation.gif' height= '175px'width = '300'>");
 //articleDiv initial image
 //$("#articleDiv").html("<img src = 'assets/images/finance.gif' height= '230px'width = '680'>");
 //quizBtn initial image
-$("#quizInitial-image").html("<img src = 'assets/images/quiz.gif' height= '120px'width = '180'>");
+$("#quizInitial-image").html("<img src = 'assets/images/quetionMark.gif' height= '120px'width = '180'>");
