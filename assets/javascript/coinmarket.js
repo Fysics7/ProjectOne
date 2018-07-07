@@ -121,8 +121,8 @@ $(document).ready(function() {
                     var descDiv = $("<div>").text(desc);
 
                     var sourceDiv = $("<div>").text(src);
-                    
-                    var linkDiv = $("<a>").attr("href", articleURL);
+                    //Rie's comment : I added attr("target","_blank") to open an article in a new tab. 
+                    var linkDiv = $("<a>").attr("href", articleURL).attr("target","_blank");
                     
 
                     var imgDiv = $("<img>").attr({
