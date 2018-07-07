@@ -57,6 +57,11 @@ $(document).ready(function() {
                 }]
             },
             options: {
+                title: {
+                    display: true,
+                    text: 'Crypto Market Dominance',
+                    fontSize: 36
+                },
                 scales: {
                     yAxes: [{
                         gridLines: {
