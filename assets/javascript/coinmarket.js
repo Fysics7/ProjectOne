@@ -128,7 +128,7 @@ $(document).ready(function() {
                     var imgDiv = $("<img>").attr({
                         src: imgURL,
                         alt: title,
-                        width: "75%",
+                        width: "55%",
                     });
 
                 
@@ -136,7 +136,7 @@ $(document).ready(function() {
                     //$(linkDiv).text(title);
                     var monkDiv = linkDiv.append(imgDiv);
 
-
+                    
                     $("#articleDiv").append(titleDiv);
                     $("#articleDiv").append(monkDiv);
                     $("#articleDiv").append("<br>");
