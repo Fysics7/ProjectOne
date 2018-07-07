@@ -5,10 +5,12 @@
 }
 #updatePrices {
 
-  font-size: 20px;
+  font-size: 25px;
   font-family: 'Share Tech Mono', monospace;
-  color: yellow;
-  background-color: black;
+  color: whitesmoke;
+  background-color: #273bd5;
+  border: solid 4px;
+  border-color: black;
 }
 
 .carousel-item {
