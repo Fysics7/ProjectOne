@@ -137,8 +137,8 @@ $(document).ready(function() {
                     var monkDiv = linkDiv.append(imgDiv);
 
                     
-                    $("#articleDiv").append(titleDiv);
-                    $("#articleDiv").append(monkDiv);
+                    $("#articleDiv").prepend(titleDiv);
+                    $("#articleDiv").prepend(monkDiv);
                     $("#articleDiv").append("<br>");
                     /*$("#articleDiv").append(titleDiv);
                     $("#articleDiv").append(authDiv);
